@@ -608,31 +608,51 @@ img { max-width: 100%; }
 
 /* Tools */
 .tools-section {
-  display: flex;
-  align-items: center;
-  gap: 28px;
   margin-top: 52px;
   padding-top: 36px;
   border-top: 1px solid var(--border);
-  flex-wrap: wrap;
 }
 .tools-label {
+  display: block;
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
-  flex-shrink: 0;
+  margin-bottom: 20px;
 }
-.tools-list { display: flex; gap: 10px; flex-wrap: wrap; }
-.tool-item {
-  font-size: 0.76rem;
-  padding: 6px 16px;
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 22px;
   border: 1px solid var(--border);
-  color: var(--text);
+  background: var(--cream);
+  min-width: 88px;
   transition: all var(--transition);
+  cursor: default;
 }
-.tool-item:hover { border-color: var(--bronze); color: var(--bronze); }
+.tool-card:hover {
+  border-color: var(--bronze);
+  background: rgba(184, 134, 74, 0.05);
+  transform: translateY(-2px);
+}
+.tool-emoji { font-size: 1.6rem; line-height: 1; }
+.tool-name {
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  text-align: center;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+.tool-card:hover .tool-name { color: var(--bronze); }
 
 /* ===== Knowledge Map ===== */
 .knowledge-flow {

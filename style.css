@@ -940,23 +940,74 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.26); }
 /* ===== About MD Callout ===== */
 .about-md-callout {
   margin-top: 28px;
-  padding: 24px 28px;
+  padding: 24px 28px 24px 24px;
   border-left: 3px solid var(--bronze);
   background: rgba(184, 134, 74, 0.05);
+  position: relative;
+}
+.callout-quote {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(184, 134, 74, 0.25);
+  line-height: 1;
+  display: block;
+  margin-bottom: -8px;
 }
 .about-md-callout p {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 0.95rem;
-  color: var(--dark);
-  line-height: 1.85;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 2;
   margin: 0;
 }
-.about-md-callout em {
-  font-style: normal;
+.about-md-callout strong {
   color: var(--bronze);
-  font-weight: 600;
+  font-weight: 700;
 }
+
+/* ===== Shared Icon Box ===== */
+.s-icon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  background: var(--cream);
+}
+.section-alt .s-icon { background: var(--cream-alt); }
+
+/* Timeline icon box */
+.tl-icon-box {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  background: var(--cream);
+}
+.section-alt .tl-icon-box { background: var(--cream-alt); }
+
+/* Timeline highlight box */
+.tl-highlight {
+  margin-top: 14px;
+  padding: 14px 18px;
+  border-left: 2px solid var(--bronze);
+  background: rgba(184, 134, 74, 0.04);
+  font-size: 0.84rem;
+  color: var(--text);
+  line-height: 1.85;
+}
+.tl-highlight strong { color: var(--bronze); font-weight: 600; }
 
 /* ===== Section desc light (cream bg) ===== */
 .section-desc-light {

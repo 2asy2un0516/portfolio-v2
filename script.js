@@ -34,10 +34,10 @@ navMobile.querySelectorAll('a').forEach(link => {
 // ===== Typewriter Effect =====
 const typedTextEl = document.getElementById('typedText');
 const phrases = [
-  '데이터 기반 마케터입니다',
-  '꼼꼼한 MD를 꿈꿉니다',
-  '팀을 이끄는 리더입니다',
-  '새로운 도전을 즐깁니다',
+  'MD 포지션을 목표합니다',
+  '상품의 흐름을 이해합니다',
+  '물류부터 마케팅까지 연결합니다',
+  '꼼꼼한 상품 기획을 합니다',
 ];
 
 let phraseIdx = 0;

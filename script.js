@@ -139,8 +139,3 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.35 });
 
 sections.forEach(s => sectionObserver.observe(s));
-
-// ===== PDF Download =====
-function downloadPDF() {
-  window.print();
-}

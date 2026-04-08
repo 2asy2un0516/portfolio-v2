@@ -139,3 +139,24 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.35 });
 
 sections.forEach(s => sectionObserver.observe(s));
+
+// ===== PDF Download =====
+function downloadPDF() {
+  const btn = document.querySelector('.btn-pdf');
+  btn.textContent = '생성 중...';
+  btn.disabled = true;
+
+  const opt = {
+    margin: 0,
+    filename: '황해찬_포트폴리오.pdf',
+    image: { type: 'jpeg', quality: 0.95 },
+    html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+  };
+
+  html2pdf().set(opt).from(document.body).save().then(() => {
+    btn.textContent = 'PDF 다운로드';
+    btn.disabled = false;
+  });
+}

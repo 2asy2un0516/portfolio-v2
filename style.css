@@ -315,6 +315,9 @@ img { max-width: 100%; }
 .btn-primary:hover { background: var(--bronze); }
 .btn-outline { border: 1px solid var(--dark); color: var(--dark); }
 .btn-outline:hover { background: var(--dark); color: var(--cream); }
+.btn-pdf { border: 1px solid var(--bronze); color: var(--bronze); background: transparent; cursor: pointer; font-family: inherit; }
+.btn-pdf:hover { background: var(--bronze); color: var(--cream); }
+.btn-pdf:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .hero-stats {
   display: flex;

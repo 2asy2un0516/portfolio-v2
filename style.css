@@ -1218,8 +1218,15 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.26); }
   .knowledge-card,
   .skill-row { page-break-inside: avoid; }
 
+  /* fade-in 요소 강제 표시 (스크롤 없이도 보이도록) */
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
   /* 스킬바 — 실제 너비로 표시 */
-  .skill-bar-fill { transition: none; }
+  .skill-bar-fill { transition: none !important; }
 
   /* 다크 섹션 배경 유지 */
   .section-dark { background: var(--dark) !important; }

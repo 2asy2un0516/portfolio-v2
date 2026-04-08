@@ -1163,3 +1163,65 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.26); }
 
   .tools-section { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
+
+/* ===== Print / PDF ===== */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 숨길 UI 요소 */
+  #scrollProgress,
+  nav#navbar,
+  .scroll-indicator,
+  .hero-btns,
+  .hero-deco-line,
+  #scrollTop,
+  footer,
+  .cursor { display: none !important; }
+
+  /* fixed 포지션 해제 */
+  body { overflow: visible; }
+
+  /* 히어로 섹션 */
+  #hero {
+    min-height: auto;
+    padding: 48px 0 40px;
+    page-break-after: always;
+  }
+  .hero-name { font-size: 6rem; }
+  .hero-container { padding-top: 0; padding-bottom: 0; gap: 48px; }
+
+  /* 타이핑 텍스트 — 정적 텍스트로 대체 */
+  .hero-typed-wrap::before {
+    content: "마케팅 · MD · 물류 전 과정을 이해하는 취업 준비생";
+    font-size: 0.95rem;
+    color: var(--dark);
+    font-weight: 500;
+  }
+  #typedText { display: none; }
+
+  /* 섹션 여백 축소 */
+  .section { padding: 48px 0; }
+
+  /* 페이지 나누기 */
+  #knowledge  { page-break-before: always; }
+  #md-value   { page-break-before: always; }
+  #experience { page-break-before: always; }
+  #contact    { page-break-before: always; }
+
+  /* 내부 잘림 방지 */
+  .timeline-item,
+  .mv-card,
+  .strength-item,
+  .knowledge-card,
+  .skill-row { page-break-inside: avoid; }
+
+  /* 스킬바 — 실제 너비로 표시 */
+  .skill-bar-fill { transition: none; }
+
+  /* 다크 섹션 배경 유지 */
+  .section-dark { background: var(--dark) !important; }
+  .section-dark * { color: inherit; }
+}
